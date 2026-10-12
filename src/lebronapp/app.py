@@ -18,7 +18,7 @@ class LebronApp(toga.App):
         top_space = toga.Box(style = Pack(flex = 1, background_color = Navy))
 
         # Picture of LeBron
-        lebron_pic = toga.ImageView(toga.Image("resources/Lebron.png"), style=Pack(width = 280, height = 280, background_color = Navy, margin = 10), )
+        lebron_pic = toga.ImageView(toga.Image("resources/Lebron.png"), style=Pack(width = 280, height = 325, background_color = Navy, margin = 10), )
 
         # Title
         title = toga.Label("LeBron James", style = Pack(font_size = 30, font_weight = "bold",
@@ -43,7 +43,14 @@ class LebronApp(toga.App):
 
         # The main app screen (blank)
         top_bar = toga.Box(style=Pack(height = 12, background_color = Red))
-        self.app_box = toga.Box(children=[top_bar], style=Pack(direction = COLUMN, background_color = Blue))
+
+        # Work in progress message
+        menu_top_space = toga.Box(style=Pack(flex = 1, background_color = Navy))
+        menu_label = toga.Label("Work in progress", style=Pack(font_size = 20, font_weight = "bold",
+                               text_align = CENTER, color = White, background_color = Navy, margin = 10), )
+        menu_bottom_space = toga.Box(style=Pack(flex = 1, background_color = Navy))
+
+        self.app_box = toga.Box(children=[top_bar, menu_top_space, menu_label, menu_bottom_space], style=Pack(direction = COLUMN, background_color = Navy))
 
         # Phone sized window
         self.main_window = toga.MainWindow(
