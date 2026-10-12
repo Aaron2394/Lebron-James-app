@@ -18,7 +18,7 @@ class LebronApp(toga.App):
         top_space = toga.Box(style = Pack(flex = 1, background_color = Navy))
 
         # Picture of LeBron
-        lebron_pic = toga.ImageView(toga.Image("resources/Lebron.png"), style=Pack(width = 200, height = 200, background_color = Navy, margin = 10), )
+        lebron_pic = toga.ImageView(toga.Image("resources/Lebron.png"), style=Pack(width = 280, height = 280, background_color = Navy, margin = 10), )
 
         # Title
         title = toga.Label("LeBron James", style = Pack(font_size = 30, font_weight = "bold",
